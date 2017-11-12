@@ -10,12 +10,12 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class POI
 {
-	public Workbook loadWorkbook(File f) throws IOException, InvalidFormatException
+	public static XSSFWorkbook loadXSSFWorkbook(File f) throws IOException, InvalidFormatException
 	{
 		return new XSSFWorkbook(f);
 	}
 
-	public void saveWorkbook(Workbook wb, File f) throws IOException
+	public static void saveWorkbook(Workbook wb, File f) throws IOException
 	{
 		FileOutputStream outputStream = new FileOutputStream(f);
 		wb.write(outputStream);
